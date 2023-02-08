@@ -1,0 +1,82 @@
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, WinInet, Vcl.StdCtrls , System.JSON , System.DateUtils ;
+
+ procedure FormCreate(Sender: TObject);
+ 
+ private
+    { Private declarations }
+    var
+     servidorIP : string ; {variável global}
+  public
+    { Public declarations }
+  end;
+
+var
+  frmtest: Tfrmtest;
+  
+  {$R *.dfm}
+
+{$REGION 'TWebBrowser'}
+
+
+type
+  TWebBrowser = class(TThread)
+  private
+    FURL: string;
+  protected
+    procedure Execute; override;
+  public
+    constructor Create(const URL: string );
+  end;
+
+constructor TWebBrowser.Create(const URL: string ) ;
+begin
+  inherited Create(True);
+  FreeOnTerminate := True;
+  FURL  := URL;
+  Resume;
+end;
+
+procedure TWebBrowser.Execute;
+var
+  hSession, hService, hRequest: HINTERNET;
+  Buffer: array[0..1024] of AnsiChar;
+  BytesRead: DWORD;
+  Str : string ;
+begin
+  hSession := InternetOpen('TWebBrowser', INTERNET_OPEN_TYPE_PRECONFIG, nil, nil, 0);
+try
+  hService := InternetOpenURL(hSession, PChar(FURL), nil, 0, INTERNET_FLAG_RELOAD, 0);
+  try
+    if Assigned(hService) then
+    begin
+      InternetReadFile(hService, @Buffer, SizeOf(Buffer), BytesRead);
+      Synchronize(procedure
+      begin
+       Str := trim(Buffer);
+       Str := Copy(Str, 1, Length(Str) - 1);
+       frmtest.servidorIP := Str ;
+       end);
+    end;
+  finally
+    InternetCloseHandle(hService);
+  end;
+finally
+  InternetCloseHandle(hSession);
+end;
+end;
+
+
+{$ENDREGION}
+
+
+
+procedure Tfrmtest.FormCreate(Sender: TObject);
+var
+WebBrowser: TWebBrowser;
+begin
+  WebBrowser := TWebBrowser.Create('https://pastebin.com/raw/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+ end;
+ 
+end.
