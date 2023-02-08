@@ -1,2 +1,2 @@
-# UtilSQL
-Utilitários em SQL
+# Cases Examples
+Cases Examples in Pascal
