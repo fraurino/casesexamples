@@ -1,43 +1,42 @@
-uses
-  SysUtils, Classes, Graphics;
+{$APPTYPE CONSOLE}
 
-function BitmapToBase64(const Bitmap: TBitmap): string;
+uses
+  System.SysUtils,
+  System.Classes,
+  Vcl.Graphics,
+  Soap.EncdDecd;
+
+function Base64FromBitmap(Bitmap: TBitmap): string;
 var
-  Stream: TMemoryStream;
-  Input: TStringStream;
+  Input: TBytesStream;
   Output: TStringStream;
 begin
-  Stream := TMemoryStream.Create;
+  Input := TBytesStream.Create;
   try
-    Bitmap.SaveToStream(Stream);
-    Stream.Position := 0;
-    Input := TStringStream.Create(Stream.Memory, Stream.Size, TEncoding.ASCII);
+    Bitmap.SaveToStream(Input);
+    Input.Position := 0;
+    Output := TStringStream.Create('', TEncoding.ASCII);
     try
-      Output := TStringStream.Create('', TEncoding.ASCII);
-      try
-        Output.CopyFrom(Input, Input.Size);
-        Result := Output.DataString;
-      finally
-        Output.Free;
-      end;
+      Soap.EncdDecd.EncodeStream(Input, Output);
+      Result := Output.DataString;
     finally
-      Input.Free;
+      Output.Free;
     end;
   finally
-    Stream.Free;
+    Input.Free;
   end;
 end;
 
-function Base64ToBitmap(const Base64: string): TBitmap;
+function BitmapFromBase64(const base64: string): TBitmap;
 var
   Input: TStringStream;
-  Output: TMemoryStream;
+  Output: TBytesStream;
 begin
-  Input := TStringStream.Create(Base64, TEncoding.ASCII);
+  Input := TStringStream.Create(base64, TEncoding.ASCII);
   try
-    Output := TMemoryStream.Create;
+    Output := TBytesStream.Create;
     try
-      Output.CopyFrom(Input, Input.Size);
+      Soap.EncdDecd.DecodeStream(Input, Output);
       Output.Position := 0;
       Result := TBitmap.Create;
       try
@@ -54,20 +53,17 @@ begin
   end;
 end;
 
-
-exemplo de uso
 var
   Bitmap: TBitmap;
-  Base64: string;
+  s: string;
+
 begin
   Bitmap := TBitmap.Create;
-  try
-    Bitmap.LoadFromFile('image.bmp');
-    Base64 := BitmapToBase64(Bitmap);
-    Bitmap.Free;
-    Bitmap := Base64ToBitmap(Base64);
-    Bitmap.SaveToFile('image2.bmp');
-  finally
-    Bitmap.Free;
-  end;
-end;
+  Bitmap.SetSize(100,100);
+  Bitmap.Canvas.Brush.Color := clRed;
+  Bitmap.Canvas.FillRect(Rect(20, 20, 80, 80));
+  s := Base64FromBitmap(Bitmap);
+  Bitmap.Free;
+  Bitmap := BitmapFromBase64(s);
+  Bitmap.SaveToFile('C:\desktop\temp.bmp');
+end.
