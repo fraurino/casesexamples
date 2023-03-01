@@ -1,5 +1,5 @@
-procdimento para tratar o prefixo e removê-lo do arquivo xml lido.
-procedure RemoveNS0FromXMLFile(const inputFileName, outputFileName, prefix: string);
+procedimento para tratar o prefixo e removê-lo do arquivo xml lido.
+procedure RemovePrefixFromXMLFile(const inputFileName, outputFileName, prefix: string);
   var
     inputFile, outputFile: TextFile;
     line: string;
@@ -48,7 +48,7 @@ procedure RemoveNS0FromXMLFile(const inputFileName, outputFileName, prefix: stri
        try
           inputFileName  := OpenDialog1.FileName ;//arquivo xml original
           outputFileName := ExtractFilePath(Opendialog1.FileName) +  'new '+ExtractFileName(OpenDialog1.FileName) ;//arquivo xml sem prefixo;
-          RemoveNS0FromXMLFile(inputFileName, outputFileName, 'ns0:'); // executando o procedumento de tratamento;
+          RemovePrefixFromXMLFile(inputFileName, outputFileName, 'ns0:'); // executando o procedumento de tratamento;
           ACBrNFe1.NotasFiscais.LoadFromFile(outputFileName ); //carregando o novo xml tratado sem prefixo;
           
           //lendo dados;
