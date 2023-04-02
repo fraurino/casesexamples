@@ -23,6 +23,47 @@ uses
     
     }
     
+    (*
+    O que faz:
+
+    - Aceita operadores aritméticos +, -, *, x, X, /, :, ^
+
+    - Aceita operadores lógicos <, >, =, !
+
+    - Aceita constantes matemáticas PI, E
+
+    - Aceita funções SEN, COS, TAN, RAIZ, QUADRADO, CUBO, ROUND, TRUNC, ABS, FRAC, PAR, LN, LOG2, LOG10, 
+                     ARCSEN, ARCCOS, ARCTAN, COTAN, DEGRAD, RADDEG, MEDIA, HIPOTENUSA, DIV, MOD
+
+    - Aceita funções encadeadas (ex.: CUBO (RAIZ 5))
+
+    - Aceita parêntesis encadeados
+
+    - Trabalha com valores negativos
+
+    - Faz cálculos de sinais (++ = +; +- = -; -+ = -; -- = +) inseridos numa expressão
+
+    - Respeita as prioridades das operações na ordem: Parêntesis --> Funções --> ^ --> *, x, X, /, : --> +, -
+
+    - Guarda o históricos dos cálculos, passo a passo.
+
+    - Permite construir uma string com a ajuda total ou parcial sobre a unit.
+
+    O que não faz:
+
+    - Muita coisa... Falta saber o quê!  😞
+
+    Há funções ainda a adicionar, aceitam-se sugestões. Por agora pus só as mais básicas
+
+    Não fiz grandes testes, pelo que é possível haver algum bug: Se alguém detetar, agradeço o aviso
+
+    Particularidades:
+
+    - Para usar funções encadeadas, a segunda função deve estar dentro de parêntesis
+
+    - Faz algum controlo de erros, nomeadamente, abre ou fecha (no inicio ou no fim da expressão respetivamente) os parêntesis que não tenham sido corretamente inseridos
+    *)
+    
 
 const
      // Line Break
