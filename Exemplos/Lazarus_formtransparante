@@ -1,0 +1,20 @@
+uses
+  Windows , Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls; 
+
+
+procedure FormTransparente(Formulario: TForm; Titulo : string);
+begin
+  Formulario.Color         :=clWhite;
+  Formulario.BorderStyle   := bsNone ;
+  Formulario.caption       := Titulo;
+  Formulario.BorderIcons   := [biSystemMenu] ;
+  Formulario.Position      := poWorkAreaCenter;
+  Windows.SetWindowLongPtr(Self.Handle, GWL_EXSTYLE,GetWindowLongPtr(Self.Handle, GWL_EXSTYLE) or WS_EX_LAYERED);
+  Windows.SetLayeredWindowAttributes(Self.Handle, Color, 0, LWA_COLORKEY);
+ end;            
+end;
+
+chamando o procecedure
+FormTransparente( Form1, 'Splash' ) ;   
+
+exemplo
