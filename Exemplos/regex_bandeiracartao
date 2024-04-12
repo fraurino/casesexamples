@@ -1,5 +1,6 @@
 function NomeBandeiraCartao(ANumero: String): String;
 // https://gist.github.com/gusribeiro/263a165db774f5d78251
+// https://github.com/joemilc/nomebandeiracartao
 const
   BANDEIRAS: array[0..15, 0..1] of String = (
     ('Amex','^3[47][0-9]{13}$'),
