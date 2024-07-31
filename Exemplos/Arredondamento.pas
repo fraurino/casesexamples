@@ -21,6 +21,7 @@ var
   tipoArredondamento: TTipoArredondamento;
 begin
   tipoArredondamento := taArredondamentoSimples; // Defina o tipo de arredondamento desejado
-  valor := TipoValorArredondamento(valorDesconto, tipoArredondamento);// Chame a função com o tipo de arredondamento
+  valor := TipoValorArredondamento(1234.5678, tipoArredondamento);// Chame a função com o tipo de arredondamento
+  //valor := 1234.57
 end;
 
