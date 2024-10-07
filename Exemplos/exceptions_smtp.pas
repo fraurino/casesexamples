@@ -1,5 +1,18 @@
 
-class function smtp.exceptions_smtp(codigo: Integer; const provedor: string): string;
+class function CapturaCodigoErroSMTP( const MensagemErro: string): Integer;
+var
+  CodigoStr: string;
+begin
+  // Extrai os três primeiros caracteres da mensagem de erro
+  CodigoStr := Copy(MensagemErro, 1, 3);
+  // Tenta converter os três primeiros caracteres para número
+  if TryStrToInt(CodigoStr, Result) then
+    Exit
+  else
+    Result := -1; // Retorna -1 se a conversão falhar (ou seja, código inválido)
+end;
+
+class function exceptions_smtp(codigo: Integer; const provedor: string): string;
   function retorno(texto: string): string;
   var
     Builder: TStringBuilder;
