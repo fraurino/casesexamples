@@ -1,3 +1,5 @@
+-- post BY +55 66 9927-9859 ~John Lennon 😎
+
 CREATE TABLE dfe_cclas_tributacao_ibs_cbs (
   id_cclas_ibs_cbs int(11) unsigned NOT NULL auto_increment,
   id_cst_ibs_cbs int(11) default NULL,
@@ -221,4 +223,5 @@ insert  into dfe_cst_tributacao_ibs_cbs(id_cst_ibs_cbs,cst_ibs_cbs,descricao_cst
 insert  into dfe_cst_tributacao_ibs_cbs(id_cst_ibs_cbs,cst_ibs_cbs,descricao_cst_ibs_cbs,ind_gibscbs,ind_gibscbsmono,ind_gred,ind_gdif,ind_gtransfcred,indnfe,indnfce,indcte,indcteos,indbpe,indbpetm,indnf3e,indnfcom,indnfse) values (14,'800','Transferência de crédito','NAO','NAO','NAO','NAO','SIM','SIM','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO');
 insert  into dfe_cst_tributacao_ibs_cbs(id_cst_ibs_cbs,cst_ibs_cbs,descricao_cst_ibs_cbs,ind_gibscbs,ind_gibscbsmono,ind_gred,ind_gdif,ind_gtransfcred,indnfe,indnfce,indcte,indcteos,indbpe,indbpetm,indnf3e,indnfcom,indnfse) values (15,'810','Ajustes','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO');
 insert  into dfe_cst_tributacao_ibs_cbs(id_cst_ibs_cbs,cst_ibs_cbs,descricao_cst_ibs_cbs,ind_gibscbs,ind_gibscbsmono,ind_gred,ind_gdif,ind_gtransfcred,indnfe,indnfce,indcte,indcteos,indbpe,indbpetm,indnf3e,indnfcom,indnfse) values (16,'820','Tributação em declaração de regime específico','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','SIM');
+
 insert  into dfe_cst_tributacao_ibs_cbs(id_cst_ibs_cbs,cst_ibs_cbs,descricao_cst_ibs_cbs,ind_gibscbs,ind_gibscbsmono,ind_gred,ind_gdif,ind_gtransfcred,indnfe,indnfce,indcte,indcteos,indbpe,indbpetm,indnf3e,indnfcom,indnfse) values (17,'830','Exclusão de base de cálculo','SIM','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','NAO','SIM','NAO','NAO');
