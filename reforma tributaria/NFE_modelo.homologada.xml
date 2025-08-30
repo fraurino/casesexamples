@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00" xmlns="http://www.portalfiscal.inf.br/nfe">
+	<NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+		<infNFe Id="NFe00000000000000000000000000000000000000000000" versao="4.00">
+			<ide>
+				<cUF>21</cUF>
+				<cNF>05411399</cNF>
+				<natOp>VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS</natOp>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>674</nNF>
+				<dhEmi>2025-07-18T01:23:10-03:00</dhEmi>
+				<dhSaiEnt>2025-07-18T14:03:48-03:00</dhSaiEnt>
+				<tpNF>1</tpNF>
+				<idDest>1</idDest>
+				<cMunFG>2111300</cMunFG>
+				<tpImp>2</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>6</cDV>
+				<tpAmb>2</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>1</indFinal>
+				<indPres>1</indPres>
+				<indIntermed>0</indIntermed>
+				<procEmi>0</procEmi>
+				<verProc>20251000</verProc>
+			</ide>
+			<emit>
+				<CNPJ>00000000000000</CNPJ>
+				<xNome>EMPRESA DEMONSTRACAO</xNome>
+				<xFant>NOME FANTASIA</xFant>
+				<enderEmit>
+					<xLgr>ENDEREDO DO EMISSOR</xLgr>
+					<nro>000</nro>
+					<xBairro>BAIRRO DO EMISSOR</xBairro>
+					<cMun>2111300</cMun>
+					<xMun>CIDADE DO EMISSOR</xMun>
+					<UF>MA</UF>
+					<CEP>65000000</CEP>
+					<cPais>1058</cPais>
+					<xPais>Brasil</xPais>
+					<fone>0000000000</fone>
+				</enderEmit>
+				<IE>000000000</IE>
+				<CRT>1</CRT>
+			</emit>
+			<dest>
+				<CPF>00000000000</CPF>
+				<xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome>
+				<enderDest>
+					<xLgr>ENDEREDO DO DESTINATARIO</xLgr>
+					<nro>N .</nro>
+					<xBairro>BAIRRO DO DESTINATARIO</xBairro>
+					<cMun>2111300</cMun>
+					<xMun>CIDADE DO DESTINATARIO</xMun>
+					<UF>MA</UF>
+					<CEP>65000000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>9888923379</fone>
+				</enderDest>
+				<indIEDest>9</indIEDest>
+				<email>meu email</email>
+			</dest>
+			<autXML>
+				<CNPJ>00000000000000</CNPJ>
+			</autXML>
+			<det nItem="1">
+				<prod>
+					<cProd>557</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<cBarra>SEM GTIN</cBarra>
+					<xProd>REG.78L05 (G.112) Ref REG.78L05 (G.112)</xProd>
+					<NCM>20098990</NCM>
+					<CFOP>5102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>1.0000</qCom>
+					<vUnCom>1.3000000000</vUnCom>
+					<vProd>1.30</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<cBarraTrib>SEM GTIN</cBarraTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>1.0000</qTrib>
+					<vUnTrib>1.3000000000</vUnTrib>
+					<indTot>1</indTot>
+				</prod>
+				<imposto>
+					<vTotTrib>0.17</vTotTrib>
+					<ICMS>
+						<ICMSSN102>
+							<orig>0</orig>
+							<CSOSN>102</CSOSN>
+						</ICMSSN102>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>1.30</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISOutr>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pPIS>0.0000</pPIS>
+							<vPIS>0.00</vPIS>
+						</PISOutr>
+					</PIS>
+					<COFINS>
+						<COFINSOutr>
+							<CST>99</CST>
+							<vBC>1.30</vBC>
+							<pCOFINS>0.0000</pCOFINS>
+							<vCOFINS>0.00</vCOFINS>
+						</COFINSOutr>
+					</COFINS>
+					<IS>
+						<CSTIS>000</CSTIS>
+						<cClassTribIS>000001</cClassTribIS>
+						<vBCIS>1.30</vBCIS>
+						<pIS>2.00</pIS>
+						<pISEspec>2.00</pISEspec>
+						<uTrib>UNIDAD</uTrib>
+						<qTrib>1.0000</qTrib>
+						<vIS>0.03</vIS>
+					</IS>
+					<IBSCBS>
+						<CST>000</CST>
+						<cClassTrib>000001</cClassTrib>
+						<gIBSCBS>
+							<vBC>1.30</vBC>
+							<gIBSUF>
+								<pIBSUF>0.1000</pIBSUF>
+								<vIBSUF>0.00</vIBSUF>
+							</gIBSUF>
+							<gIBSMun>
+								<pIBSMun>0.0000</pIBSMun>
+								<vIBSMun>0.00</vIBSMun>
+							</gIBSMun>
+							<gCBS>
+								<pCBS>0.9000</pCBS>
+								<vCBS>0.01</vCBS>
+							</gCBS>
+						</gIBSCBS>
+					</IBSCBS>
+				</imposto>
+				<infAdProd>Valor aprox. do tributo 0,17</infAdProd>
+			</det>
+			<det nItem="2">
+				<prod>
+					<cProd>557</cProd>
+					<cEAN>SEM GTIN</cEAN>
+					<cBarra>SEM GTIN</cBarra>
+					<xProd>REG.78L05 (G.112) Ref REG.78L05 (G.112)</xProd>
+					<NCM>20098990</NCM>
+					<CFOP>5102</CFOP>
+					<uCom>UN</uCom>
+					<qCom>10.0000</qCom>
+					<vUnCom>1.3000000000</vUnCom>
+					<vProd>13.00</vProd>
+					<cEANTrib>SEM GTIN</cEANTrib>
+					<cBarraTrib>SEM GTIN</cBarraTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>1.0000</qTrib>
+					<vUnTrib>1.3000000000</vUnTrib>
+					<indTot>1</indTot>
+				</prod>
+				<imposto>
+					<vTotTrib>1.75</vTotTrib>
+					<ICMS>
+						<ICMSSN102>
+							<orig>0</orig>
+							<CSOSN>102</CSOSN>
+						</ICMSSN102>
+					</ICMS>
+					<IPI>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>13.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISOutr>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pPIS>0.0000</pPIS>
+							<vPIS>0.00</vPIS>
+						</PISOutr>
+					</PIS>
+					<COFINS>
+						<COFINSOutr>
+							<CST>99</CST>
+							<vBC>13.00</vBC>
+							<pCOFINS>0.0000</pCOFINS>
+							<vCOFINS>0.00</vCOFINS>
+						</COFINSOutr>
+					</COFINS>
+					<IS>
+						<CSTIS>000</CSTIS>
+						<cClassTribIS>000001</cClassTribIS>
+						<vBCIS>13.00</vBCIS>
+						<pIS>2.00</pIS>
+						<pISEspec>2.00</pISEspec>
+						<uTrib>UNIDAD</uTrib>
+						<qTrib>10.0000</qTrib>
+						<vIS>0.26</vIS>
+					</IS>
+					<IBSCBS>
+						<CST>000</CST>
+						<cClassTrib>000001</cClassTrib>
+						<gIBSCBS>
+							<vBC>13.00</vBC>
+							<gIBSUF>
+								<pIBSUF>0.1000</pIBSUF>
+								<vIBSUF>0.00</vIBSUF>
+							</gIBSUF>
+							<gIBSMun>
+								<pIBSMun>0.0000</pIBSMun>
+								<vIBSMun>0.00</vIBSMun>
+							</gIBSMun>
+							<gCBS>
+								<pCBS>0.9000</pCBS>
+								<vCBS>0.12</vCBS>
+							</gCBS>
+						</gIBSCBS>
+					</IBSCBS>
+				</imposto>
+				<infAdProd>Valor aprox. do tributo 1,75</infAdProd>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>0.00</vBC>
+					<vICMS>0.00</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>14.30</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>0.00</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>0.00</vPIS>
+					<vCOFINS>0.00</vCOFINS>
+					<vOutro>0.00</vOutro>
+					<vNF>14.30</vNF>
+					<vTotTrib>1.92</vTotTrib>
+				</ICMSTot>
+				<ISTot>
+					<vIS>0.29</vIS>
+				</ISTot>
+				<IBSCBSTot>
+					<vBCIBSCBS>14.30</vBCIBSCBS>
+					<gCBS>
+						<vDif>0.00</vDif>
+						<vDevTrib>0.00</vDevTrib>
+						<vCBS>0.13</vCBS>
+						<vCredPres>0.00</vCredPres>
+						<vCredPresCondSus>0.00</vCredPresCondSus>
+					</gCBS>
+				</IBSCBSTot>
+				<vNFTot>0.43</vNFTot>
+			</total>
+			<transp>
+				<modFrete>9</modFrete>
+				<vol>
+					<qVol>0</qVol>
+				</vol>
+			</transp>
+			<pag>
+				<detPag>
+					<indPag>0</indPag>
+					<tPag>01</tPag>
+					<vPag>14.30</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infCpl>;Imposto aproximado(ibpt).: R$1,92.;</infCpl>
+			</infAdic>
+		</infNFe>
+		<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+				<Reference URI="#NFe00000000000000000000000000000000000000000000">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+					<DigestValue>yjgKXRi2hN4HMTRc4waGTVwq+3k=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>AhLkYLAPpp............./gB+CAzORAFon</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>MIIHpDCCBYygAwI.......gY4eBY6uIXw==</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+	<protNFe xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+		<infProt Id="ID421250000012882">
+			<tpAmb>2</tpAmb>
+			<verAplic>SVAN_2.4.1</verAplic>
+			<chNFe>00000000000000000000000000000000000000000000</chNFe>
+			<dhRecbto>2025-07-18T13:54:09-03:00</dhRecbto>
+			<nProt>421250000012882</nProt>
+			<digVal>yjgKXRi2hN4HMTRc4waGTVwq+3k=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso da NF-e</xMotivo>
+		</infProt>
+	</protNFe>
+</nfeProc>
