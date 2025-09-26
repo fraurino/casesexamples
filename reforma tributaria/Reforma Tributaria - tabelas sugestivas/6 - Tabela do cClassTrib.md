@@ -23,7 +23,7 @@ CREATE TABLE DFE_CCLASTRIB_IBS_CBS (
     CREDITO_PARA           VARCHAR(1000),
     DATA_INICIO_VIG        DATE,
     DATA_FIM_VIG           DATE,
-    DATA_ATUALIZACAO       DATE
+    DATA_ATUALIZACAO       TIMESTAMP
 );
 
 ALTER TABLE DFE_CCLASTRIB_IBS_CBS ADD CHECK(ind_credpres IN ('SIM','NAO'));
@@ -301,5 +301,6 @@ INSERT INTO DFE_CCLASTRIB_IBS_CBS (ID_CCLAS_IBS_CBS, ID_CST_IBS_CBS, CST_IBS_CBS
 
 COMMIT WORK;
 ```
+
 
 Essa estrutura cria a tabela `DFE_CCLASTRIB_IBS_CBS` para armazenar os códigos de classificação tributária (cClassTrib) do IBS/CBS. Os comandos `INSERT INTO` adicionam registros iniciais a essa tabela.
